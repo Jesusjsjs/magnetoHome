@@ -63,6 +63,7 @@ camera.position.x = 2;
 camera.position.y = -2;
 camera.position.z = 8;
 
+
 moon.rotation.x = 3.1415*0.02;
 moon.rotation.y = 3.1415*1.54;
 
@@ -78,11 +79,12 @@ function animate() {
 }
 animate();
 
+const sizeWidth = document.getElementById('information').clientWidth;
 
 function onResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(sizeWidth , window.innerHeight);
 }
 
 window.addEventListener('resize', onResize, false);
